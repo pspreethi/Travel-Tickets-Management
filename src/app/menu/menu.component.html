@@ -1,0 +1,19 @@
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="font-size:medium; background-color: lightcoral;">
+  <div class="container"style="overflow-x: hidden;">
+      <a class="navbar-brand"><i class="fa fa-bus mr-4"></i>Travel Tickets Management</a>
+      <ul class="navbar-nav ml-auto" routerLinkActive="active">
+
+          <li class="nav-item"><a  *ngIf="login" class="nav-link" routerLink="dashboard" style="color: white;"> <i class="fa fa-home mr-2"></i>User Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="home" style="color: white;"> <i class="fa fa-home mr-2"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="faq" style="color: white;"> <i class="fa fa-question mr-2"></i>FAQ's</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="signup" style="color: white"><i class="fa fa-user-plus mr-2"></i> Sign-Up</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="Login"style="color: white"> <i class="fa fa-user mr-2"></i>Login</a></li>
+
+          <!-- <li class="nav-item"><a class="nav-link" routerLink="">Logout</a></li> -->
+
+      </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

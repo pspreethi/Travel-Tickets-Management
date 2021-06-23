@@ -1,0 +1,35 @@
+
+<div class="container mt-4 " >
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="row mb-5 pb-5">
+
+        <table class="table table-bordered" style="border: gray;">
+
+          <thead class="thead-light" style="background-color: gray;">
+            <tr>
+                <!-- <th>Number</th> -->
+                <th>Bus Name</th>
+                <th>Time of departure</th>
+                <th>Fare</th>
+                <th>Number of seats</th>
+                <th>Route ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of buses">
+              <!-- <td style="counter-increment: Number;"></td> -->
+              <td> <h6>{{u.BusName}}</h6></td>
+              <td> <h6>{{u.Time}}</h6></td>
+              <td>{{u.Fare}}</td>
+              <td>{{u.Seats}}</td>
+              <td>{{u.RouteID}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

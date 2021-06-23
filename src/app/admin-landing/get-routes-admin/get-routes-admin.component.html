@@ -1,0 +1,32 @@
+
+
+<div class="container mt-4 " >
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="row mb-5 pb-5">
+
+        <table class="table table-bordered" style="border: gray;">
+
+          <thead class="thead-light" style="background-color: gray;">
+            <tr>
+                <!-- <th>Number</th> -->
+                <th>Route ID</th>
+                <th>Leaving From</th>
+                <th>Going To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of routes">
+              <!-- <td style="counter-increment: Number;"></td> -->
+              <td> <h6>{{u.RouteID}}</h6></td>
+              <td> <h6>{{u.Start}}</h6></td>
+              <td>{{u.End}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

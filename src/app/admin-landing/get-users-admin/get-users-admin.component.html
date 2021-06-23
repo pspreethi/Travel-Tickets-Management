@@ -1,0 +1,44 @@
+
+<div class="container mt-4 " >
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row mb-5 pb-5">
+
+        <table class="table">
+
+          <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th> Email</th>
+                <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of users">
+              <td> <h6>{{u.FirstName}}</h6></td>
+              <td>{{u.LastName}}</td>
+              <td>{{u.Age}}</td>
+              <td>{{u.Gender}}</td>
+              <td>{{u.Email}}</td>
+              <td>{{u.Mobile}}</td>
+              <!-- <ng-template #template>
+
+                  <div class="modal-body">
+                      <button type="button" class="close pull-right" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <select-seat [bus]="b"></select-seat>
+                  </div>
+              </ng-template> -->
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

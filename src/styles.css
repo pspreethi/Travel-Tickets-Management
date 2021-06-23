@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+
+.handle {
+  float: left;
+  width: 100%;
+}
+.handle img {
+  float: right;
+}
+  .row1  {
+      float: left;
+      width: 50%;
+  }
+
+  .row1 ul {
+      width: 40%;
+      float: left;
+  }
+
+  .seat_plan_wrap {
+      border: 3px solid coral;
+      padding: 40px;
+  }
+  .total{
+     margin-top: 10px;
+      background: #F7F7F7;
+      padding: 7px;
+      border: 1px solid #eee;
+  }
+
+  .seat_plan {
+      height: 270px;
+  }
+  .alert {
+      float: left;
+  }
+
+
+  /* MODAL WIDTH EDIT  */
+
+  .modal-dialog {
+      max-width:900px!important;
+  }
+
+      /* MODAL WIDTH EDIT  */
+
+

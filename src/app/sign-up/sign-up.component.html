@@ -1,0 +1,130 @@
+<!-- <div class="container">
+<form class="col s12 white" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+  <div class="row">
+    <div class="input-field col s6">
+      <input class="validate" type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName" required>
+      <label data-error="Required field!">FirstName</label>
+    </div>
+    <div class="input-field col s6">
+      <input class="validate" type="text" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName" required>
+      <label data-error="Required field!">LastName</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s4">
+      <input type="text" name="Age" #Age="ngModel" [(ngModel)]="user.Age">
+      <label>Age</label>
+    </div>
+    <div class="input-field col s4">
+      <input type="text" name="Gender" #Gender="ngModel" [(ngModel)]="user.Gender">
+      <label>Gender</label>
+    </div>
+    <div class="input-field col s4">
+      <input type="text" name="Mobile" #Mobile="ngModel" [(ngModel)]="user.Mobile">
+      <label>Mobile</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input class="validate" type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern">
+      <label data-error="Invalid email!">Email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input type="text" name="Password" #Password="ngModel" [(ngModel)]="user.Password">
+      <label>Password</label>
+    </div>
+  </div>
+  <div class="row">
+      <div class="input-field col s12">
+        <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+      </div>
+    </div>
+</form>
+<div>
+ -->
+ <div class="signup-form">
+  <div class="alert alert-success" *ngIf="submitted">
+    {{message}}
+    <div *ngIf="submitted" class="text-center"><a href="#" [routerLink]="['/','Login']" routerLinkActive="active">Login</a></div>
+ </div>
+  <form action="/examples/actions/confirmation.php" method="post" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+  <h2>Sign Up</h2>
+  <p>Please fill in this form to create an account!</p>
+  <hr>
+
+      <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="fa fa-user"></i>
+        </span>
+      </div>
+      <!-- <input type="text" class="form-control" name="FirstName" placeholder="FirstName" required="required"> -->
+      <input class="form-control" type="text" name="FirstName" placeholder="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName" required>
+      <input class="form-control" type="text" name="LastName" placeholder="LastName" #LastName="ngModel" [(ngModel)]="user.LastName" required>
+    </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <!-- <input type="text" class="form-control" name="FirstName" placeholder="FirstName" required="required"> -->
+          <input class="form-control" type="text" name="Age" placeholder="Age" #Age="ngModel" [(ngModel)]="user.Age">
+         <!--  <input class="form-control" type="text" name="Gender" placeholder="Gender" #Gender="ngModel" [(ngModel)]="user.Gender"> -->
+          <select class="form-control" type="text" name="Gender" placeholder="Gender" #Gender="ngModel" [(ngModel)]="user.Gender">
+            <option value="" style="color: grey;">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-paper-plane"></i>
+                </span>
+              </div>
+              <input class="form-control" type="text" name="Email" placeholder="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern">
+              <label data-error="Invalid email!"></label>
+            </div>
+              </div>
+
+      <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="fa fa-phone"></i>
+        </span>
+      </div>
+      <input class="form-control"  type="text" name="Mobile" placeholder="Mobile Number" #Mobile="ngModel" [(ngModel)]="user.Mobile">
+    </div>
+      </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="fa fa-lock"></i>
+        </span>
+      </div>
+      <input type="password" class="form-control" name="Password" placeholder="Password" #Password="ngModel" [(ngModel)]="user.Password" required="required">
+    </div>
+  </div>
+      <div class="form-group">
+    <!-- <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label> -->
+  </div>
+  <div class="form-group">
+          <button type="submit"[disabled]="!userRegistrationForm.valid" class="btn btn-primary btn-lg" >Sign Up</button>
+      </div>
+  </form>
+<div class="text-center">Already have an account? <a href="#" style="color:lightcoral" [routerLink]="['/','Login']" routerLinkActive="active">Login here</a></div>
+</div>

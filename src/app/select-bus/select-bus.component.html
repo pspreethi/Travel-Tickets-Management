@@ -1,0 +1,38 @@
+<div class="alert alert-danger" *ngIf="Error">
+  {{message}}
+</div>
+<div class="container" style="align-items: center;margin-left: 340px;padding-left: 50px; margin-top: 100px;">
+  <div class="col-md-5 block mt-3 pb-2 pt-3" style="background-color:white; opacity: 1;">
+
+      <form class="col s12 white" #RouteForm="ngForm" (ngSubmit)="onSubmit(RouteForm)">
+        <div class="row">
+          <div class="form-group col-md-6" >
+            <label style="color: lightcoral; font-weight: bold;"><i class="fa fa-location-arrow mr-1"></i>Leaving from</label>
+            <select  required class="form-control form-control-sm" ngModel name="Start" >
+              <option value="" style="color: grey;">Select Place</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Hyderabad">Chennai</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label style="color: lightcoral; font-weight: bold;"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Going To</label>
+            <select placeholder="Going-to"  ngModel name="End"  required class="form-control form-control-sm">
+              <option value="" style="color: grey;">Select Place</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label style="color: lightcoral; font-weight: bold;"> Departing On</label>
+            <input type="date" ngModel name="Date" required class="form-control form-control-sm" >
+          </div>
+        </div>
+        <button class="btn btn-block mt-3 mb-5 btn-search btn-sm" style="color: white; "> <i class="fa mr-2 fa-search"></i> Search Buses</button>
+      </form>
+    </div>
+  </div>
+

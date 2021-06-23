@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="alert alert-success" *ngIf="submitted">
+    {{message}}
+ </div>
+<div class="col-sm-7" >
+<table class="table table-sm">
+  <h2 style="align-items: center; font-weight: bold;">Booking Confirmation Details</h2>
+  <tr style="font-family: Arial, Helvetica, sans-serif">
+    Name:
+    {{user.FirstName}}
+  </tr>
+  <tr style="font-family: Arial, Helvetica, sans-serif;">
+    Mobile  : {{user.Mobile}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Leaving From  : {{bookingdetails.journey_route.Start}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Going To  : {{bookingdetails.journey_route.End}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Date : {{bookingdetails.journey_route.Date}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Seats  : {{bookingdetails.seats}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Travels Name  : {{bookingdetails.bus.BusName}}
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+  Departure Time : {{bookingdetails.bus.Time}} pm
+</tr>
+<tr style="font-family: Arial, Helvetica, sans-serif;">
+ Email : {{user.Email}}
+</tr>
+<hr>
+<br>
+<button (click)="ConfirmBooking()" class="btn btn-danger btn-sm">Confirm</button>
+</table>
+  </div>
+
+
+
+
+

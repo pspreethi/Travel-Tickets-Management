@@ -1,0 +1,39 @@
+
+<div class="container mt-4 " >
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row mb-5 pb-5">
+
+        <table class="table table-bordered" style="border: gray;">
+
+          <thead class="thead-light" style="background-color: gray;">
+            <tr>
+                <!-- <th>Number</th> -->
+                <th>Booking ID</th>
+                <th>Leaving From</th>
+                <th>Going To</th>
+                <th>Date of Journey</th>
+                <th>Seat</th>
+                <th>Bus ID</th>
+                <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of bookings">
+              <!-- <td style="counter-increment: Number;"></td> -->
+              <td> <h6>{{u.BookingID}}</h6></td>
+              <td> <h6>{{u.Start}}</h6></td>
+              <td>{{u.End}}</td>
+              <td>{{u.Date}}</td>
+              <td>{{u.Seat}}</td>
+              <td>{{u.BusID}}</td>
+              <td>{{u.Email}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,118 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7 ">
+
+      <div class="border" >
+        <img src="https://www.pngkey.com/png/detail/363-3633869_car-steering-wheel-clipart-car-steering-wheel-icon.png" style="width: 50px; height: 50px; transform: rotate(270deg);">
+      <div class="row ml-5">
+        <div class="col-md-12 ">
+
+          <a  class="btn btn-primary mr-2" id = "04" (click)="seat('04')">04</a>
+          <a  class="btn btn-primary mr-2" id = "08" (click)="seat('08')" >08</a>
+          <a  class="btn btn-primary mr-2" id = "12" (click)="seat('12')">12</a>
+          <a  class="btn btn-primary mr-2" id = "16" (click)="seat('16')">16</a>
+          <a  class="btn btn-primary mr-2" id = "20" (click)="seat('20')">20</a>
+          <a  class="btn btn-primary mr-2" id = "24" (click)="seat('24')">24</a>
+          <a  class="btn btn-primary mr-2" id = "28" (click)="seat('28')">28</a>
+          <a  class="btn btn-primary mr-2" id = "32" (click)="seat('32')">32</a>
+          <a  class="btn btn-primary mr-2" id = "36" (click)="seat('36')">36</a>
+          <a  class="btn btn-primary mr-2" id = "40" (click)="seat('40')">40</a>
+
+        </div>
+
+        <div class="col-md-12 mt-2">
+
+          <a  class="btn btn-primary mr-2" id = "03" (click)="seat('03')">03</a>
+          <a  class="btn btn-primary mr-2" id = "07" (click)="seat('07')">07</a>
+          <a  class="btn btn-primary mr-2" id = "11" (click)="seat('11')">11</a>
+          <a  class="btn btn-primary mr-2" id = "15" (click)="seat('15')">15</a>
+          <a  class="btn btn-primary mr-2" id = "19" (click)="seat('19')">19</a>
+          <a  class="btn btn-primary mr-2" id = "23" (click)="seat('23')">23</a>
+          <a  class="btn btn-primary mr-2" id = "27" (click)="seat('27')">27</a>
+          <a  class="btn btn-primary mr-2" id = "31" (click)="seat('31')">31</a>
+          <a  class="btn btn-primary mr-2" id = "35" (click)="seat('35')">35</a>
+          <a  class="btn btn-primary mr-2" id = "39" (click)="seat('39')">39</a>
+
+        </div>
+        <div class="col-md-12 mt-3 mb-3">
+
+
+        </div>
+        <div class="col-md-12 mt-2">
+
+
+          <a  class="btn btn-primary mr-2" id = "02" (click)="seat('02')">02</a>
+          <a  class="btn btn-primary mr-2" id = "06" (click)="seat('06')">06</a>
+          <a  class="btn btn-primary mr-2" id = "10" (click)="seat('10')">10</a>
+          <a  class="btn btn-primary mr-2" id = "14" (click)="seat('14')">14</a>
+          <a  class="btn btn-primary mr-2" id = "18" (click)="seat('18')">18</a>
+          <a  class="btn btn-primary mr-2" id = "22" (click)="seat('22')">22</a>
+          <a  class="btn btn-primary mr-2" id = "26" (click)="seat('26')">26</a>
+          <a  class="btn btn-primary mr-2" id = "30" (click)="seat('30')">30</a>
+          <a  class="btn btn-primary mr-2" id = "34" (click)="seat('34')">34</a>
+          <a  class="btn btn-primary mr-2" id = "38" (click)="seat('38')">38</a>
+
+        </div>
+        <div class="col-md-12 mt-2 mb-4">
+
+
+          <a  class="btn btn-primary mr-2" id = "01" (click)="seat('01')">01</a>
+          <a  class="btn btn-primary mr-2" id = "05" (click)="seat('05')">05</a>
+          <a  class="btn btn-primary mr-2" id = "09" (click)="seat('09')">09</a>
+          <a  class="btn btn-primary mr-2" id = "13" (click)="seat('13')">13</a>
+          <a  class="btn btn-primary mr-2" id = "17" (click)="seat('17')">17</a>
+          <a  class="btn btn-primary mr-2" id = "21" (click)="seat('21')">21</a>
+          <a  class="btn btn-primary mr-2" id = "25" (click)="seat('25')">25</a>
+          <a  class="btn btn-primary mr-2" id = "29" (click)="seat('29')">29</a>
+          <a  class="btn btn-primary mr-2" id = "33" (click)="seat('33')">33</a>
+          <a  class="btn btn-primary mr-2" id = "37" (click)="seat('37')">37</a>
+
+        </div>
+
+
+      </div>
+      <hr>
+      </div>
+
+      <div  *ngIf="alert" class="alert alert-danger ">You can buy only 4 seats in one time </div>
+    </div>
+
+    <div class="col-md-5 ">
+      <div class="seat_plan">
+        <br>
+        <table class="table ">
+          <thead>
+            <tr>
+              <th>Seats</th>
+              <th>Fare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of showSeatList">
+              <td>{{s.SeatNo}}</td>
+              <td>{{s.Fare}}</td>
+              <td><button (click)="removeitem(s)" class="btn btn-danger btn-sm">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <div class="total  bg-default">
+          <b>Total: {{total}}</b>
+        </div>
+        <div class="row ">
+          <button (click)="confirmJourney()" class="btn mt-3 ml-3 btn-primary btn-sm btn-block ">Confirm</button>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -57,6 +57,9 @@ LoginAdmin(adminUser: AdminUser){
     }
   })) */
 }
+logout() {
+  localStorage.removeItem('loggedUser');
+}
 private handleError(error: HttpErrorResponse): any {
   if (error.status === 400) {           // client side error
     console.error('An error occurred:', error.error.message);

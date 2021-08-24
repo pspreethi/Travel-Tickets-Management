@@ -46,7 +46,7 @@ export class SelectBusComponent implements OnInit {
         this.busservice.getRouteMessage(routeID);
         this.router.navigate(['/searchresult']);
     })
-    if (this.Error = true){
+    if (this.Error){
       this.message = "Routes Not Available";
     }
 

@@ -21,6 +21,7 @@ import { BookingComponent } from './booking/booking.component';
 import { AddbusesComponent } from './admin-landing/addbuses/addbuses.component';
 import { ViewbookingsComponent } from './admin-landing/viewbookings/viewbookings.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AuthAGuard } from './auth-a.guard';
 
 
 const appRoutes: Routes = [
@@ -54,11 +55,13 @@ const appRoutes: Routes = [
   },
   {
     path: 'addroutes',
+    canActivate: [AuthAGuard],
     component: AddRoutesComponent
 
   },
   {
     path: 'addbuses',
+    canActivate: [AuthAGuard],
     component: AddbusesComponent
 
   },
@@ -70,6 +73,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'viewbookings',
+    canActivate: [AuthAGuard],
     component: ViewbookingsComponent
 
   },
@@ -90,16 +94,19 @@ const appRoutes: Routes = [
   },
   {
     path: 'getUsersAdmin',
+    canActivate: [AuthAGuard],
     component: GetUsersAdminComponent
 
   },
   {
     path: 'getBusesAdmin',
+    canActivate: [AuthAGuard],
     component: GetBusesAdminComponent
 
   },
   {
     path: 'getRoutesAdmin',
+    canActivate: [AuthAGuard],
     component: GetRoutesAdminComponent
 
   },
@@ -115,6 +122,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'adminlanding',
+    canActivate: [AuthAGuard],
     component: AdminLandingComponent
 
   },

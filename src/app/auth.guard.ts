@@ -56,5 +56,19 @@ export class AuthGuard implements CanActivate {
     }
 
     }
+    canActivateAdmin(): boolean {
+      let user = JSON.parse(localStorage.getItem('currentUser')|| '{}');
+      console.log(user)
+
+      if ("loggedUser" in localStorage) {
+          return true;
+      }
+      else{
+        alert("Can't access the page, if you are an admin please LOGIN!")
+        this.router.navigate(['/Login']);
+        return false;
+      }
+
+      }
 
 }

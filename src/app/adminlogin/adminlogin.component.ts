@@ -9,7 +9,7 @@ import { AdminService } from '../Services/admin.service';
   styleUrls: ['./adminlogin.component.css']
 })
 export class AdminloginComponent implements OnInit {
-  Error: boolean;
+  Error: boolean = false;
   message: string;
 
   constructor(private adminservice: AdminService, private formbuilder: FormBuilder,private router:Router) { }
@@ -23,14 +23,15 @@ export class AdminloginComponent implements OnInit {
 
     this.adminservice.LoginAdmin(loginForm.value).subscribe(data=>{
       var succ = data;
-      if(succ){
-        this.Error = false;
-        localStorage.setItem("loggedUser", JSON.stringify(succ));
-        this.router.navigate(['/adminlanding']);
-      }
+      this.Error = false;
+      localStorage.setItem("loggedUser", JSON.stringify(succ));
+      this.router.navigate(['/adminlanding']);
+
     })
-    this.Error = true;
-    this.message = "Wrong Credentials";
+    if(this.Error){
+      this.message = "Wrong Credentials";
+    }
+
   }
 
 }

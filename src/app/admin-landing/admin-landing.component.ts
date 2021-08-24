@@ -1,3 +1,4 @@
+import { AdminService } from 'src/app/Services/admin.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class AdminLandingComponent implements OnInit {
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private adminservice:AdminService) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +32,11 @@ export class AdminLandingComponent implements OnInit {
   OnSubmitBookings(){
     this.router.navigate(['/viewbookings']);
   }
+  Onlogout(){
+    this.adminservice.logout();
+    alert("Are you sure?")
+    this.router.navigate(['/home']);
+ }
 
 
 }
